@@ -103,16 +103,16 @@ describe('eventif', function(){
 	describe('eventif-y emitter', function(){
 		before(function(){
 			class MyEmitter extends events {}
-			emitter = new MyEmitter();
-			EventIf.y(emitter);
+			emitter = EventIf.y(MyEmitter);
+			emitter = new emitter();
 		});
 		allTests();
 	});
 	describe('enable emitter', function(){
 		before(function(){
 			class MyEmitter extends events {}
-			emitter = new MyEmitter();
-			EventIf.enable(emitter);
+			emitter = EventIf.enable(MyEmitter);
+			emitter = new emitter();
 		});
 		allTests();
 	});

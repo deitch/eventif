@@ -86,9 +86,7 @@ const myEmitter = new MyEmitter();
 In both of the above examples, you are creating a new emitter by inheriting from `eventif` instead of from `events`.
 
 #### Enable an Existing Emitter
-**NOTE: Enabling is not functional yet.**
-
-If you already have a standard event emitter which, somewhere down the line, inherits from `events`, you may not be able to change it to inherit from `eventif` instead. In that case, instead of creating a new event emitter, you *enable* the existing one to be eventif capable. 
+If you already have a standard event emitter class which, somewhere down the line, inherits from `events`, you may not be able to change it to inherit from `eventif` instead. In that case, instead of creating a new event emitter, you *enable* the existing one to be eventif capable. 
 
 ````javascript
 const Eventif = require('eventif');
@@ -100,11 +98,31 @@ function MyEmitter() {
 }
 util.inherits(MyEmitter, Eventif);
 
-myEmitter = new MyEmitter();
-Eventif.y(myEmitter);
+Em = Eventif.y(MyEmitter);
 // or an alias
-Eventif.enable(myEmitter);
+Em = Eventif.enable(MyEmitter);
+
+myEmitter = new Em();
 ````
+
+If es6 classes make you happier:
+
+````javascript
+const EventIf = require('eventif');
+const EventEmitter = require('events');
+class MyEmitter extends EventEmitter {}
+
+Em = Eventif.y(MyEmitter);
+// or an alias
+Em = Eventif.enable(MyEmitter);
+
+myEmitter = new Em();
+````
+
+
+
+**NOTE:** You only can enable an existing event emitter class if it inherits from `EventEmitter`. 
+
 
 Now we have an eventif-capable emitter. Let's use it!
 

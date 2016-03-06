@@ -1,7 +1,7 @@
 {
   "name": "eventif",
   "description": "Intelligent event emitter for nodejs - only handle events when they have 'the right stuff'",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "license": "MIT",
   "url": "http://github.com/deitch/eventif",
   "author": "Avi Deitcher (https://github.com/deitch)",
