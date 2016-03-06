@@ -86,6 +86,8 @@ const myEmitter = new MyEmitter();
 In both of the above examples, you are creating a new emitter by inheriting from `eventif` instead of from `events`.
 
 #### Enable an Existing Emitter
+**NOTE: Enabling is not functional yet.**
+
 If you already have a standard event emitter which, somewhere down the line, inherits from `events`, you may not be able to change it to inherit from `eventif` instead. In that case, instead of creating a new event emitter, you *enable* the existing one to be eventif capable. 
 
 ````javascript

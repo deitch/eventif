@@ -1,8 +1,8 @@
 {
   "name": "eventif",
   "description": "Intelligent event emitter for nodejs - only handle events when they have 'the right stuff'",
-  "version": "0.2.1",
-	"license": "MIT",
+  "version": "0.2.2",
+  "license": "MIT",
   "url": "http://github.com/deitch/eventif",
   "author": "Avi Deitcher (https://github.com/deitch)",
   "contributors": [
@@ -21,11 +21,12 @@
   },
   "bugs": "https://github.com/deitch/eventif/issues",
   "devDependencies": {
-    "mocha": "~1.13.0",
-    "should": "~1.3.0"
+    "mocha": "^2.4.5",
+    "should": "^8.2.2",
+    "sinon": "^1.17.3"
   },
   "scripts": {
-    "test": "node ./test/test.js"
+    "test": "node_modules/.bin/mocha"
   },
   "dependencies": {
     "searchjs": "^0.7.2"
