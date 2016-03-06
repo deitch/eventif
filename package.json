@@ -1,0 +1,32 @@
+{
+  "name": "eventif",
+  "description": "Intelligent event emitter for nodejs - only handle events when they have 'the right stuff'",
+  "version": "0.2.0",
+  "url": "http://github.com/deitch/eventif",
+  "author": "Avi Deitcher (https://github.com/deitch)",
+  "contributors": [
+    {
+      "name": "Avi Deitcher",
+      "url": "http://github.com/deitcher"
+    }
+  ],
+  "engines": {
+    "node": ">=4.0"
+  },
+  "main": "./lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/deitch/eventif.git"
+  },
+  "bugs": "https://github.com/deitch/eventif/issues",
+  "devDependencies": {
+    "mocha": "~1.13.0",
+    "should": "~1.3.0"
+  },
+  "scripts": {
+    "test": "node ./test/test.js"
+  },
+  "dependencies": {
+    "searchjs": "^0.7.2"
+  }
+}
